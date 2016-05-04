@@ -599,7 +599,7 @@ bool CGroupMessageModel::resetMsgId(uint32_t nGroupId)
         string strKey = "group_msg_id_" + int2string(nGroupId);
         string strValue = "0";
         string strReply = pCacheConn->set(strKey, strValue);
-        if(strReply == strValue)
+        if(strReply == "OK")
         {
             bRet = true;
         }
